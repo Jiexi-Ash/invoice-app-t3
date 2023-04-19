@@ -5,10 +5,10 @@ import Link from "next/link";
 import data from "~/data.json";
 
 import { api } from "~/utils/api";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 
 import { PlusIcon } from "@heroicons/react/24/solid";
-import Invoice from "./components/Invoice";
+import Invoice from "../components/Invoice";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className="flex min-h-screen flex-col bg-secondaryBlack px-6">
-        <div className="flex w-full items-center justify-between  pt-9">
+        <div className="mx-auto flex w-full max-w-[672px]  items-center justify-between pt-9">
           <div className="flex flex-col">
             <h1 className="text-xl font-bold text-white">Invoices</h1>
             <div className="pt-1 text-xs text-lavender">
